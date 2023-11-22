@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        background-color: #ffffff;
+        color: #000000;
+
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-text-size-adjust: 100%;
+
+        --toastify-color-light: #ffffff;
+        --toastify-color-info: #312e81;
+        --toastify-color-success: #312e81;
+        --toastify-color-warning: #ef4444;
+        --toastify-color-error: #ef4444;
+        --toastify-color-transparent: rgba(255, 255, 255, 0.7);
+
+        --toastify-icon-color-info: var(--toastify-color-info);
+        --toastify-icon-color-success: var(--toastify-color-success);
+        --toastify-icon-color-warning: var(--toastify-color-warning);
+        --toastify-icon-color-error: var(--toastify-color-error);
+
+        --toastify-toast-width: 280px;
+        --toastify-toast-min-height: 44px;
+        --toastify-toast-max-height: 400px;
+        --toastify-font-family: "Poppins", sans-serif;
+        --toastify-z-index: 9999;
+
+        --toastify-text-color-light: #312e81;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+    }
+
+    body {
+        min-width: 320px;
+        min-height: 100svh;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #4f46e5;
+        color: #ffffff;
+    }
+
+    input,
+    textarea,
+    button,
+    select {
+        font-family: inherit;
+        color: #312e81;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    img {
+        max-inline-size: 100%;
+        block-size: auto;
+    }
+
+    .custom-toast-style {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}

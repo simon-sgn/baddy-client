@@ -1,0 +1,20 @@
+{
+    "short_name": "Baddy",
+    "name": "Baddy - Find your badminton buddy!",
+    "icons": [
+        {
+            "src": "/baddyLogo180.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/baddyLogo512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#312e81",
+    "background_color": "#ffffff"
+}
