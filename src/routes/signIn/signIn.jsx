@@ -86,9 +86,16 @@ const SignIn = () => {
             <h1 className="text-lg font-extrabold">Sign in</h1>
             <div className="flex flex-col items-center gap-5">
                 <div aria-live="polite">
-                    {loading && <Spinner />}
+                    {loading && (
+                        <div className="flex h-[14.5rem] items-center justify-center">
+                            <Spinner />
+                        </div>
+                    )}
                     {!loading && (
-                        <form onSubmit={handleSignIn} className="min-w-[18rem]">
+                        <form
+                            onSubmit={handleSignIn}
+                            className="my-3 flex min-w-[18rem] flex-col gap-3"
+                        >
                             <FormInput
                                 label="Email address"
                                 type="email"
@@ -99,7 +106,7 @@ const SignIn = () => {
                                 id="email"
                                 maxLength="150"
                                 autoFocus
-                                className="my-3 max-w-[18rem]"
+                                className="max-w-[18rem]"
                             />
                             <FormInput
                                 label="Password"
@@ -110,7 +117,7 @@ const SignIn = () => {
                                 value={password}
                                 id="password"
                                 maxLength="320"
-                                className="my-3 max-w-[18rem]"
+                                className="max-w-[18rem]"
                             />
                             <Button
                                 type="submit"
@@ -119,7 +126,7 @@ const SignIn = () => {
                             >
                                 Sign in
                             </Button>
-                            <GoogleSignInButton className="my-3" locationState={locationState} />
+                            <GoogleSignInButton locationState={locationState} />
                         </form>
                     )}
                 </div>

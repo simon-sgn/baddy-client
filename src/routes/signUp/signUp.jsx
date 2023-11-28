@@ -91,9 +91,16 @@ const SignUp = () => {
             <h1 className="text-lg font-extrabold">Sign up</h1>
             <div className="flex flex-col items-center gap-5">
                 <div aria-live="polite">
-                    {loading && <Spinner />}
+                    {loading && (
+                        <div className="flex h-[18.25rem] items-center justify-center">
+                            <Spinner />
+                        </div>
+                    )}
                     {!loading && (
-                        <form onSubmit={handleSignUp} className="min-w-[18rem]">
+                        <form
+                            onSubmit={handleSignUp}
+                            className="my-3 flex min-w-[18rem] flex-col gap-3"
+                        >
                             <FormInput
                                 label="Display name"
                                 type="text"
@@ -104,7 +111,7 @@ const SignUp = () => {
                                 id="name"
                                 maxLength="150"
                                 autoFocus
-                                className="my-3 max-w-[18rem]"
+                                className="max-w-[18rem]"
                             />
                             <FormInput
                                 label="Email"
@@ -115,7 +122,7 @@ const SignUp = () => {
                                 value={email}
                                 id="email"
                                 maxLength="320"
-                                className="my-3 max-w-[18rem]"
+                                className="max-w-[18rem]"
                             />
                             <FormInput
                                 label="Password"
@@ -126,7 +133,7 @@ const SignUp = () => {
                                 value={password}
                                 id="password"
                                 maxLength="64"
-                                className="my-3 max-w-[18rem]"
+                                className="max-w-[18rem]"
                             />
                             <FormInput
                                 label="Confirm password"
@@ -137,11 +144,11 @@ const SignUp = () => {
                                 value={confirmPassword}
                                 id="confirmPassword"
                                 maxLength="64"
-                                className="my-3 max-w-[18rem]"
+                                className="max-w-[18rem]"
                             />
                             <Button
                                 type="submit"
-                                className="my-3 max-w-[18rem]"
+                                className="max-w-[18rem]"
                                 buttonType={buttonTypeClasses.invertedButton}
                             >
                                 Create Account
